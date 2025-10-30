@@ -7,5 +7,9 @@ class ScheduleModel{
 
   ScheduleModel({
     required this.id,
-  })
+    required this.content,
+    required this.date,
+    required this.startTime,
+    required this.endTime
+  });
 }
