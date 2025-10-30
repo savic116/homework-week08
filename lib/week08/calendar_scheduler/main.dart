@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/week07/calendar_scheduler/database/drift_database.dart';
+import 'package:myapp/week08/calendar_scheduler/database/drift_database.dart';
 import 'package:get_it/get_it.dart';
-import 'package:myapp/week07/calendar_scheduler/screen/home_screen.dart';
+import 'package:myapp/week08/calendar_scheduler/screen/home_screen.dart';
 
 
 void main() async{
