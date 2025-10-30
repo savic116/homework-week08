@@ -1,4 +1,4 @@
-class ScheduleModel{
+class ScheduleModel {
   final String id;
   final String content;
   final DateTime date;
@@ -12,4 +12,38 @@ class ScheduleModel{
     required this.startTime,
     required this.endTime
   });
+
+  ScheduleModel.fromJson({ // json으로 부터 모델을 받아와 키값을 할당
+    required Map<String, dynamic> json,
+  }) : id = json['id'],
+       content = json['content'],
+       date = DateTime.parse(json['date']),
+       startTime = json['startTime'],
+       endTime = json['endTime'];
+
+  Map<String, dynamic> toJson(){
+    return {
+      'id' : id,
+      'content' : content,
+      'date' :
+      '${date.year}${date.month.toString().padLeft(2, '0')}${date.day.toString().padLeft(2, '0')}',
+      'startTime' : startTime,
+      'endTime' : endTime,
+    };
+  }
+  ScheduleModel copyWith({
+    String? id,
+    String? content,
+    DateTime? date,
+    int? startTime,
+    int? endTime,
+  }) {
+    return ScheduleModel(
+      id: id ?? this.id,
+      content: content ?? this.content,
+      date: date ?? this.date,
+      startTime: startTime ?? this.startTime,
+      endTime: endTime ?? this.endTime,
+    );
+  }
 }
