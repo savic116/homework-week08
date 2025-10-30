@@ -1,5 +1,5 @@
-import 'package:myapp/week06/calendar_scheduler/model/schedule_model.dart';
-import 'package:myapp/week06/calendar_scheduler/repository/schedule_repository.dart';
+import 'package:myapp/week08/calendar_scheduler/model/schedule_model.dart';
+import 'package:myapp/week08/calendar_scheduler/repository/schedule_repository.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
